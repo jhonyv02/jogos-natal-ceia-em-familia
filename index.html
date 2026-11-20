@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174936">
+  <meta name="description" content="Jogos de Natal para a Ceia em Família: PDF A4 com 32 páginas de bingo, quiz, mímica e brincadeiras para imprimir e curtir com toda a família.">
+  <title>Jogos de Natal para a Ceia em Família | Página Completa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #fff9eb;
+      --cream-deep: #f7eedb;
+      --paper: #fffdf6;
+      --green: #174936;
+      --green-dark: #103a2c;
+      --green-soft: #e6f0e7;
+      --red: #b52e36;
+      --red-dark: #91202a;
+      --red-soft: #fae7e5;
+      --gold: #bf8b32;
+      --gold-light: #f6dfab;
+      --ink: #293b32;
+      --muted: #5b695f;
+      --border: #e6dcc7;
+      --shadow: 0 12px 34px rgba(56, 47, 20, .08);
+      --shadow-lift: 0 22px 50px rgba(43, 35, 14, .14);
+      --radius: 22px;
+      --font-title: 'Fredoka', system-ui, sans-serif;
+      --font-body: 'Nunito', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    a:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 5px;
+    }
+    ::selection { background: var(--gold-light); color: var(--green-dark); }
+    .sr-only {
+      position: absolute !important;
+      width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+    .container { width: min(100% - 36px, 1120px); margin-inline: auto; }
+    .section { padding: 64px 0; }
+    .section-title {
+      margin: 12px auto 14px;
+      max-width: 790px;
+      font: 600 clamp(2rem, 6vw, 3.1rem)/1.13 var(--font-title);
+      letter-spacing: -.035em;
+      color: var(--green-dark);
+    }
+    .section-intro { color: var(--muted); max-width: 670px; margin: 0 auto 28px; font-size: 1.05rem; }
+    .center { text-align: center; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--red-dark);
+      font-size: .77rem;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: '✦'; color: var(--gold); font-size: 1.05rem; }
+    .highlight { color: var(--red); }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff7df;
+      color: #66461b;
+      border: 1px solid #ead3a1;
+      border-radius: 100px;
+      padding: 7px 12px;
+      font-size: .82rem;
+      font-weight: 900;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 57px;
+      width: 100%;
+      padding: 15px 23px;
+      border-radius: 13px;
+      background: var(--red);
+      color: #fff;
+      font: 900 1rem/1.3 var(--font-body);
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 7px 0 var(--red-dark), 0 15px 25px rgba(136, 32, 38, .16);
+      transform: translateY(0);
+      transition: background-color .2s, box-shadow .2s, transform .2s;
+    }
+    .button:hover { background: #a52630; transform: translateY(-2px); box-shadow: 0 9px 0 var(--red-dark), 0 18px 29px rgba(136, 32, 38, .2); }
+    .button:active { transform: translateY(4px); box-shadow: 0 3px 0 var(--red-dark); }
+    .button .arrow { font-size: 1.18em; font-weight: 900; }
+    .button--green { background: var(--green); box-shadow: 0 7px 0 var(--green-dark), 0 15px 25px rgba(16, 58, 44, .14); }
+    .button--green:hover { background: #205a44; box-shadow: 0 9px 0 var(--green-dark), 0 18px 29px rgba(16, 58, 44, .18); }
+    .button--green:active { box-shadow: 0 3px 0 var(--green-dark); }
+    .small-note { font-size: .83rem; color: var(--muted); text-align: center; margin: 17px 0 0; }
+    .small-note--light { color: #ecf3e9; }
+
+    /* CABEÇALHO */
+    .site-header { position: relative; z-index: 3; background: var(--cream); border-bottom: 1px solid rgba(191,139,50,.2); }
+    .header-row { min-height: 73px; display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+    .brand { display: flex; gap: 10px; align-items: center; text-decoration: none; color: var(--green-dark); }
+    .brand-mark { display: grid; place-items: center; width: 43px; height: 43px; border-radius: 13px; background: var(--red-soft); font-size: 1.45rem; }
+    .brand-text { font: 700 1.1rem/1.05 var(--font-title); letter-spacing: -.02em; }
+    .brand-text span { display: block; color: var(--red); font-size: .77rem; letter-spacing: .04em; margin-top: 3px; }
+    .top-link { color: var(--green); font-weight: 900; font-size: .85rem; text-decoration: none; border: 1.5px solid var(--green); padding: 9px 13px; border-radius: 10px; white-space: nowrap; }
+    .top-link:hover { background: var(--green-soft); }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      background: radial-gradient(ellipse at 78% 12%, #f8e6bf 0, transparent 43%),
+                  radial-gradient(ellipse at 2% 94%, #f8e0dd 0, transparent 40%),
+                  var(--cream);
+      padding: 46px 0 67px;
+    }
+    .hero::before, .hero::after { content: '✦'; position: absolute; color: #d0a452; opacity: .5; z-index: -1; }
+    .hero::before { right: 7%; top: 22px; font-size: 4.2rem; transform: rotate(22deg); }
+    .hero::after { left: 3%; bottom: 22px; font-size: 2.7rem; }
+    .hero-grid { display: grid; gap: 34px; align-items: center; }
+    .hero-copy { text-align: center; }
+    .hero h1 { font: 700 clamp(2.55rem, 10.6vw, 4.65rem)/1.02 var(--font-title); letter-spacing: -.045em; color: var(--green-dark); margin: 18px 0 18px; text-wrap: balance; }
+    .hero-lead { color: #46584c; font-size: 1.08rem; line-height: 1.58; max-width: 560px; margin: 0 auto 19px; }
+    .hero-benefits { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin: 19px auto 24px; padding: 0; list-style: none; }
+    .hero-benefits li { padding: 7px 10px; background: #fffdf6; border: 1px solid var(--border); border-radius: 30px; color: var(--green); font-size: .8rem; font-weight: 900; }
+    .hero-actions { max-width: 430px; margin-inline: auto; }
+    .hero-visual { position: relative; width: min(100%, 410px); margin: 0 auto; }
+    .hero-visual::before { content: ''; position: absolute; inset: 14px -9px -10px 11px; transform: rotate(4deg); background: #dbe9dd; border-radius: 29px; border: 1px solid #b9d0bd; z-index: -1; }
+    .visual-ribbon { position: absolute; top: -12px; right: -8px; z-index: 2; border-radius: 50%; width: 94px; height: 94px; padding: 12px; display: grid; place-items: center; text-align: center; font: 700 .92rem/1.1 var(--font-title); background: var(--red); color: white; transform: rotate(13deg); border: 3px dashed #ffe2ab; box-shadow: 0 8px 18px rgba(105,38,35,.17); }
+    .visual-label { position: absolute; bottom: -17px; left: 50%; transform: translateX(-50%) rotate(-2deg); z-index: 2; white-space: nowrap; background: var(--green); color: white; border-radius: 9px; padding: 9px 15px; font-weight: 900; box-shadow: 0 8px 22px rgba(16,58,44,.18); font-size: .86rem; }
+
+    /* As imagens são exibidas após carregar, evitando o ícone de arquivo quebrado. */
+    .gif-slot { position: relative; isolation: isolate; aspect-ratio: 4 / 5; width: 100%; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); background: #fffdf5; border: 0; }
+    /* GIFs visíveis independentemente de eventos JavaScript.
+       IMPORTANTE: não ocultar img com display:none; isso impede o carregamento lazy. */
+    .gif-slot img { display: block; position: relative; z-index: 2; width: 100%; height: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+    .gif-slot.has-gif { border: 0; }
+    .gif-slot.has-gif img { display: block; }
+    .gif-slot.has-gif .gif-placeholder { display: none; }
+    .gif-placeholder { position: absolute; z-index: 0; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 22px; background: repeating-linear-gradient(-45deg, #fffcf3, #fffcf3 14px, #fff6e4 14px, #fff6e4 28px); text-align: center; color: #786239; }
+    .gif-placeholder-icon { font-size: clamp(2.4rem, 10vw, 4rem); line-height: 1.2; filter: saturate(.85); }
+    .gif-placeholder strong { font: 600 clamp(1.15rem, 4vw, 1.5rem)/1.18 var(--font-title); max-width: 240px; color: var(--green); }
+    .gif-placeholder small { font-size: .8rem; font-weight: 800; opacity: .85; }
+
+    /* O PROBLEMA */
+    .problem { background: var(--green); color: #fff; position: relative; overflow: hidden; }
+    .problem::after { content: '✳'; position: absolute; font-size: 18rem; right: -72px; bottom: -140px; color: rgba(255,255,255,.045); line-height: 1; pointer-events: none; }
+    .problem .eyebrow { color: #ffdcaa; }
+    .problem .section-title { color: #fffdf4; }
+    .problem .section-intro { color: #e6f0e8; }
+    .scenario-grid { display: grid; gap: 12px; margin-top: 25px; }
+    .scenario { text-align: center; padding: 23px 18px; border-radius: 18px; background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.17); }
+    .scenario-icon { display: block; font-size: 2.35rem; margin-bottom: 9px; }
+    .scenario strong { display: block; font: 600 1.2rem/1.2 var(--font-title); margin-bottom: 6px; }
+    .scenario p { margin: 0; font-size: .94rem; color: #e7f0ea; }
+    .bridge-line { text-align: center; font: 600 clamp(1.25rem, 4.4vw, 1.7rem)/1.3 var(--font-title); margin: 26px auto 0; max-width: 800px; color: #ffdfa7; }
+
+    /* INCLUSO */
+    .features { background: var(--cream); }
+    .feature-grid { display: grid; gap: 14px; margin-top: 31px; }
+    .feature-card { background: var(--paper); border: 1px solid var(--border); border-radius: 18px; padding: 24px 22px; box-shadow: 0 8px 22px rgba(43,38,20,.035); }
+    .feature-icon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 16px; background: var(--green-soft); font-size: 1.9rem; margin-bottom: 14px; }
+    .feature-card:nth-child(2n) .feature-icon { background: var(--red-soft); }
+    .feature-card:nth-child(3n) .feature-icon { background: #fbefd2; }
+    .feature-card h3 { font: 600 1.35rem/1.2 var(--font-title); color: var(--green); margin: 0 0 8px; }
+    .feature-card p { margin: 0; color: var(--muted); font-size: .97rem; }
+    .center-callout { text-align: center; color: var(--green); font-weight: 900; padding-top: 24px; }
+
+    /* GALERIA */
+    .gallery-section { background: var(--cream-deep); border-block: 1px solid #eee2c9; }
+    .gallery-grid { display: grid; gap: 22px; margin-top: 31px; }
+    .gallery-item { margin: 0; }
+    .gallery-item figcaption { margin-top: 11px; text-align: center; font-weight: 900; color: var(--green); font-size: .96rem; }
+    .gallery-item figcaption span { color: var(--muted); font-weight: 600; display: block; font-size: .83rem; margin-top: 2px; }
+
+    /* COMO FUNCIONA */
+    .steps-grid { display: grid; gap: 23px; position: relative; margin-top: 38px; }
+    .step { text-align: center; padding: 0 16px; }
+    .step-num { margin: 0 auto 16px; display: grid; place-items: center; width: 62px; height: 62px; border-radius: 50%; background: var(--red); color: white; font: 700 1.5rem var(--font-title); border: 5px solid var(--cream); box-shadow: 0 0 0 2px #e5c9a1; }
+    .step h3 { margin: 0 0 6px; color: var(--green); font: 600 1.37rem var(--font-title); }
+    .step p { margin: 0 auto; color: var(--muted); max-width: 290px; }
+
+    /* PÚBLICO */
+    .audience { background: #f1f5ea; border-block: 1px solid #dfe8d9; }
+    .audience-grid { display: grid; gap: 20px; align-items: center; }
+    .audience-copy .section-title { margin-left: 0; }
+    .audience-copy .section-intro { margin-left: 0; }
+    .audience-list { padding: 0; margin: 23px 0 0; list-style: none; display: grid; gap: 13px; }
+    .audience-list li { display: flex; align-items: flex-start; gap: 11px; font-weight: 800; color: var(--green); }
+    .audience-list li::before { content: '✓'; flex: 0 0 auto; display: grid; place-items: center; width: 25px; height: 25px; background: #d7e7d5; color: var(--green); border-radius: 50%; font-size: .85rem; }
+    .audience-art { display: grid; place-items: center; min-height: 270px; border-radius: 28px; text-align: center; padding: 30px 20px; background: radial-gradient(circle at 25% 30%, #fff8d6 0 15%, transparent 16%), linear-gradient(135deg, #eac4ae, #f9e7ce 46%, #e6bca2); border: 5px solid #fffdf7; box-shadow: var(--shadow); }
+    .audience-art .emoji-family { font-size: clamp(3.6rem, 15vw, 6.7rem); line-height: 1.2; }
+    .audience-art .quote { display: block; margin-top: 18px; color: var(--green-dark); font: 600 1.55rem/1.24 var(--font-title); }
+
+    /* BÔNUS */
+    .bonus-wrap { background: var(--green); color: white; border-radius: 27px; overflow: hidden; padding: 30px 24px; display: grid; gap: 26px; align-items: center; box-shadow: var(--shadow); }
+    .bonus-wrap .eyebrow { color: #ffe1a5; }
+    .bonus-wrap h2 { color: white; margin: 13px 0 14px; font: 600 clamp(2rem, 6vw, 2.9rem)/1.11 var(--font-title); }
+    .bonus-wrap p { color: #e4eee8; margin: 0 0 16px; }
+    .bonus-price { font: 700 1.15rem var(--font-title); color: #ffdda4; }
+    .bonus-wrap .gif-slot { width: min(100%, 305px); margin: 0 auto; }
+    .bonus-wrap .gif-slot .gif-placeholder { background: repeating-linear-gradient(-45deg, #fffcf3, #fffcf3 14px, #fff4df 14px, #fff4df 28px); }
+    .bonus-footnote { font-size: .85rem; opacity: .9; margin-top: 13px !important; }
+
+    /* PREÇO */
+    .pricing { background: radial-gradient(ellipse at 50% 12%, #f9ebc8, transparent 55%), var(--cream); }
+    .price-card { max-width: 555px; margin: 30px auto 0; background: var(--paper); border: 2px solid var(--gold); border-radius: 25px; overflow: hidden; box-shadow: var(--shadow-lift); }
+    .price-bar { padding: 12px 18px; background: var(--green); color: white; text-align: center; font-weight: 900; font-size: .9rem; }
+    .price-content { padding: 27px 24px 31px; }
+    .price-overline { text-align: center; margin: 0; font-weight: 900; color: var(--red-dark); letter-spacing: .05em; text-transform: uppercase; font-size: .81rem; }
+    .price-value { text-align: center; font: 700 clamp(3.8rem, 15vw, 5.1rem)/1.16 var(--font-title); color: var(--green-dark); margin: 5px 0 0; letter-spacing: -.05em; }
+    .price-description { text-align: center; color: var(--muted); margin: 0 auto 23px; font-size: .95rem; }
+    .includes { list-style: none; padding: 20px 0; margin: 0 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); display: grid; gap: 12px; }
+    .includes li { display: flex; gap: 10px; align-items: baseline; font-weight: 800; color: var(--ink); }
+    .includes li::before { content: '✓'; color: var(--green); font-weight: 900; }
+
+    /* GARANTIA */
+    .guarantee { padding-top: 0; }
+    .guarantee-card { max-width: 800px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; margin: 0 auto; padding: 24px; border-radius: 20px; border: 1px solid #d4dfcc; background: #eaf1e4; }
+    .guarantee-icon { display: grid; place-items: center; width: 62px; height: 62px; border-radius: 50%; background: white; font-size: 1.9rem; }
+    .guarantee h2 { color: var(--green-dark); font: 600 1.5rem/1.15 var(--font-title); margin: 0 0 6px; }
+    .guarantee p { margin: 0; color: #475e4c; }
+
+    /* FAQ */
+    .faq { background: #fffdf7; border-top: 1px solid var(--border); }
+    .faq-wrap { max-width: 780px; margin: 27px auto 0; display: grid; gap: 11px; }
+    .faq details { border: 1px solid var(--border); border-radius: 15px; background: white; padding: 0 18px; }
+    .faq details[open] { border-color: #d7bc84; }
+    .faq summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; justify-content: space-between; padding: 20px 0; color: var(--green-dark); font-weight: 900; line-height: 1.4; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; display: grid; place-items: center; flex-shrink: 0; width: 27px; height: 27px; border-radius: 50%; color: var(--red); background: var(--red-soft); font: 700 1.25rem var(--font-title); }
+    .faq details[open] summary::after { content: '−'; }
+    .faq details p { margin: -4px 0 19px; color: var(--muted); font-size: .97rem; }
+    .faq-end { max-width: 470px; margin: 30px auto 0; text-align: center; }
+    .faq-end p { font-weight: 900; color: var(--green); margin: 0 0 19px; }
+
+    /* RODAPÉ */
+    .footer { background: var(--green-dark); color: #e5f0e8; padding: 27px 0; text-align: center; }
+    .footer strong { font: 600 1.18rem var(--font-title); }
+    .footer p { color: #c9dbcf; font-size: .83rem; margin: 8px 0 0; }
+    .footer a { color: #fff4d7; }
+
+    @media (min-width: 620px) {
+      .container { width: min(100% - 56px, 1120px); }
+      .section { padding: 85px 0; }
+      .hero { padding: 69px 0 92px; }
+      .hero-copy { max-width: 680px; margin-inline: auto; }
+      .scenario-grid { grid-template-columns: repeat(3, 1fr); }
+      .feature-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; }
+      .steps-grid { grid-template-columns: repeat(3, 1fr); }
+      .bonus-wrap { grid-template-columns: 1fr 280px; padding: 35px; }
+      .guarantee-card { flex-direction: row; text-align: left; padding: 25px 33px; }
+      .guarantee-icon { flex: 0 0 62px; }
+    }
+
+    @media (min-width: 940px) {
+      .header-row { min-height: 80px; }
+      .brand-text { font-size: 1.18rem; }
+      .hero-grid { grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: clamp(40px, 7vw, 95px); }
+      .hero-copy { text-align: left; margin: 0; max-width: none; }
+      .hero-lead { margin-left: 0; }
+      .hero-benefits { justify-content: flex-start; }
+      .hero-actions { margin: 0; }
+      .hero-visual { width: min(100%, 400px); }
+      .feature-grid { grid-template-columns: repeat(3, 1fr); gap: 17px; }
+      .gallery-grid { gap: 22px; }
+      .audience-grid { grid-template-columns: 1fr .9fr; gap: 75px; }
+      .audience-art { min-height: 350px; }
+      .bonus-wrap { grid-template-columns: 1fr 320px; padding: 38px 58px; }
+      .bonus-wrap .gif-slot { width: 285px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="sr-only" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#inicio" aria-label="Jogos de Natal para a Ceia em Família — início">
+        <span class="brand-mark" aria-hidden="true">🎄</span>
+        <span class="brand-text">Jogos de Natal <span>PARA A CEIA EM FAMÍLIA</span></span>
+      </a>
+      <a class="top-link" href="#preco">Ver o kit ✦</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- 1. TOPO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="pill">🎅 Natal brasileiro, com brincadeira boa</span>
+          <h1 id="hero-title">Depois do pavê… <span class="highlight">vem a diversão!</span></h1>
+          <p class="hero-lead">Transforme a mesa da ceia em uma roda de risadas com o <strong>Jogos de Natal para a Ceia em Família</strong>: um PDF A4 com <strong>32 páginas</strong> de jogos e brincadeiras para imprimir.</p>
+          <ul class="hero-benefits" aria-label="Destaques do kit">
+            <li>✓ PDF digital A4</li>
+            <li>✓ 32 páginas</li>
+            <li>✓ Para toda a família</li>
+          </ul>
+          <div class="hero-actions">
+            <!-- CHECKOUT WIVEN: link informado pelo proprietário da página. -->
+            <a class="button" href="https://checkout.wiven.com.br/checkout/cmwpiq83r0zeh01oot1tv1cs9?offer=7FRYPF6">Quero meu kit por R$ 24,90 <span class="arrow" aria-hidden="true">→</span></a>
+            <p class="small-note">🎁 Produto digital para baixar e imprimir · Sem entrega física</p>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-ribbon">32 páginas<br>de alegria!</div>
+          <div class="gif-slot">
+            <!-- GIF 1 integrado: GIF_1_Kit_Completo.gif -->
+            <img src="assets/GIF_1_Kit_Completo.gif" width="480" height="600" alt="Folhas de jogos de Natal impressas sendo folheadas numa mesa de ceia brasileira" loading="eager" decoding="async" fetchpriority="high" onerror="this.style.display='none'">
+            <div class="gif-placeholder" aria-hidden="true"><span class="gif-placeholder-icon">📖🎄</span><strong>Demonstração ilustrativa</strong><small>GIF 1 · Folheando o kit</small></div>
+          </div>
+          <div class="visual-label">👀 Espie as páginas do kit</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PROBLEMA -->
+    <section class="section problem" aria-labelledby="problem-title">
+      <div class="container">
+        <div class="center">
+          <span class="eyebrow">A cena é familiar</span>
+          <h2 class="section-title" id="problem-title">A ceia está linda… mas cadê a animação?</h2>
+          <p class="section-intro">A comida está na mesa, o tio já perguntou se é “pavê ou pacomê?” e, depois disso… silêncio.</p>
+        </div>
+        <div class="scenario-grid">
+          <div class="scenario"><span class="scenario-icon" aria-hidden="true">📱</span><strong>Todo mundo no celular</strong><p>A conversa não sai do “e as novidades?”.</p></div>
+          <div class="scenario"><span class="scenario-icon" aria-hidden="true">🙃</span><strong>As crianças entediadas</strong><p>Começa o clássico: “falta muito pra abrir o presente?”.</p></div>
+          <div class="scenario"><span class="scenario-icon" aria-hidden="true">🦃</span><strong>O mesmo roteiro de sempre</strong><p>Janta, sobremesa, foto… e alguém pergunta o que fazer agora.</p></div>
+        </div>
+        <p class="bridge-line">Que tal colocar um pouco de brincadeira entre o peru, a farofa e a rabanada? ✨</p>
+      </div>
+    </section>
+
+    <!-- 3. SOLUÇÃO -->
+    <section class="section features" id="kit" aria-labelledby="kit-title">
+      <div class="container">
+        <div class="center">
+          <span class="eyebrow">O que vem no PDF</span>
+          <h2 class="section-title" id="kit-title">Abra espaço na mesa para <span class="highlight">a diversão</span></h2>
+          <p class="section-intro">São 32 páginas em formato A4 com opções de brincadeiras para escolher, imprimir e adaptar ao estilo da sua família.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card"><span class="feature-icon" aria-hidden="true">🎯</span><h3>Bingo de Natal</h3><p>Acompanhe as cartelas e veja quem grita “bingo!” primeiro — antes da segunda rodada de sobremesa.</p></article>
+          <article class="feature-card"><span class="feature-icon" aria-hidden="true">🧠</span><h3>Quiz da família</h3><p>Perguntas para recordar histórias, descobrir curiosidades e render aquela resenha boa.</p></article>
+          <article class="feature-card"><span class="feature-icon" aria-hidden="true">🎭</span><h3>Mímica natalina</h3><p>Vale imitar o Papai Noel, a ceia inteira e até a cara de quem pegou uva-passa escondida.</p></article>
+          <article class="feature-card"><span class="feature-icon" aria-hidden="true">🎁</span><h3>Amigo ladrão</h3><p>Uma dinâmica para organizar a troca de presentes com regras fáceis de acompanhar.</p></article>
+          <article class="feature-card"><span class="feature-icon" aria-hidden="true">⭐</span><h3>Desafios para crianças</h3><p>Atividades para os pequenos participarem da festa, com a ajuda dos adultos quando necessário.</p></article>
+          <article class="feature-card"><span class="feature-icon" aria-hidden="true">💌</span><h3>Cartões de brincadeiras</h3><p>Recorte, distribua e sorteie ideias para deixar a mesa toda entrar no clima.</p></article>
+        </div>
+        <p class="center-callout">Tudo reunido em um só PDF, para você escolher as brincadeiras que combinam com sua ceia. ❤️</p>
+      </div>
+    </section>
+
+    <!-- 4. VEJA POR DENTRO -->
+    <section class="section gallery-section" id="previas" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="center">
+          <span class="eyebrow">Um gostinho do material</span>
+          <h2 class="section-title" id="gallery-title">Veja por dentro do kit</h2>
+          <p class="section-intro">Dê uma espiadinha em como as páginas podem ficar antes de escolher suas brincadeiras favoritas. <small style="display:block;margin-top:8px;font-size:.78rem">Prévias ilustrativas: confira se as páginas correspondem ao PDF final antes de publicar.</small></p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <div class="gif-slot">
+              <!-- GIF 2: bingo. Animacao incorporada diretamente no HTML. -->
+              <img src="assets/GIF_2_Bingo_de_Natal.gif" width="480" height="600" alt="Mãos de adulto e criança marcando uma cartela de bingo natalino com grãos de milho" loading="eager" decoding="async" onerror="this.style.display='none'">
+              <div class="gif-placeholder" aria-hidden="true"><span class="gif-placeholder-icon">🎯</span><strong>Demonstração ilustrativa</strong><small>GIF 2 · Bingo de Natal</small></div>
+            </div>
+            <figcaption>Bingo de Natal <span>Cartelas e clima de competição amigável</span></figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="gif-slot">
+              <!-- GIF 3: cartas de desafio. Animacao incorporada diretamente no HTML. -->
+              <img src="assets/GIF_3_Cartas_de_Desafio.gif" width="480" height="600" alt="Mão retirando uma carta de desafio natalino de um pote com laço vermelho" loading="eager" decoding="async" onerror="this.style.display='none'">
+              <div class="gif-placeholder" aria-hidden="true"><span class="gif-placeholder-icon">🃏</span><strong>Demonstração ilustrativa</strong><small>GIF 3 · Cartas de desafio</small></div>
+            </div>
+            <figcaption>Cartas de desafio <span>Sorteie uma carta e comece a brincadeira</span></figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="gif-slot">
+              <!-- GIF 4: quiz do pave. Animacao incorporada diretamente no HTML. -->
+              <img src="assets/GIF_4_Quiz_Pave_ou_Pacome.gif" width="480" height="600" alt="Mão segurando cartão do quiz natalino ao lado de uma travessa de pavê" loading="eager" decoding="async" onerror="this.style.display='none'">
+              <div class="gif-placeholder" aria-hidden="true"><span class="gif-placeholder-icon">🍮</span><strong>Demonstração ilustrativa</strong><small>GIF 4 · Quiz do pavê</small></div>
+            </div>
+            <figcaption>Quiz do pavê <span>É pavê ou pacomê? Perguntas para animar a ceia</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. COMO FUNCIONA -->
+    <section class="section" id="como-funciona" aria-labelledby="steps-title">
+      <div class="container">
+        <div class="center">
+          <span class="eyebrow">Sem complicação</span>
+          <h2 class="section-title" id="steps-title">Da compra para a mesa em 3 passos</h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step"><div class="step-num" aria-hidden="true">1</div><h3>Escolha o kit</h3><p>Faça seu pedido pelo checkout online.</p></div>
+          <div class="step"><div class="step-num" aria-hidden="true">2</div><h3>Receba por e-mail</h3><p>Depois da confirmação do pagamento, o PDF chega ao e-mail cadastrado.</p></div>
+          <div class="step"><div class="step-num" aria-hidden="true">3</div><h3>Imprima e jogue</h3><p>Use folhas A4 e escolha as brincadeiras para colocar na mesa da ceia.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PARA QUEM É -->
+    <section class="section audience" aria-labelledby="audience-title">
+      <div class="container audience-grid">
+        <div class="audience-copy">
+          <span class="eyebrow">Tem lugar para todo mundo</span>
+          <h2 class="section-title" id="audience-title">Da criança de 5 anos à vovó de 90</h2>
+          <p class="section-intro">Não precisa de uma festa gigantesca nem de ser especialista em brincadeiras. É só selecionar atividades que façam sentido para as pessoas da mesa.</p>
+          <ul class="audience-list">
+            <li>Famílias que gostam de rir juntas</li>
+            <li>Avós, pais, tios, primos e crianças</li>
+            <li>Ceias pequenas ou com a casa cheia</li>
+            <li>Quem prefere uma noite mais participativa</li>
+          </ul>
+        </div>
+        <div class="audience-art" aria-label="Ilustração decorativa de família no Natal">
+          <span class="emoji-family" aria-hidden="true">👵🏻 👨🏽 👧🏻<br>🎄 👴🏽 👦🏾</span>
+          <span class="quote">“Tio, conta outra… mas depois da mímica!”</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. BÔNUS OPCIONAL -->
+    <section class="section" aria-labelledby="bonus-title">
+      <div class="container">
+        <div class="bonus-wrap">
+          <div>
+            <span class="eyebrow">Um extra para a virada</span>
+            <h2 id="bonus-title">E que tal continuar a brincadeira no Réveillon? 🥂</h2>
+            <p>Ao finalizar a compra, você poderá adicionar o <strong>Kit Réveillon</strong> como extra opcional para a festa da virada.</p>
+            <div class="bonus-price">Acréscimo de apenas R$ 9,90</div>
+            <p class="bonus-footnote">Opcional, escolhido no checkout. O kit principal de Natal custa R$ 24,90, sem esse extra.</p>
+          </div>
+          <div class="gif-slot">
+            <!-- GIF 5 integrado: GIF_5_Bonus_Reveillon.gif -->
+            <img src="assets/GIF_5_Bonus_Reveillon.gif" width="480" height="600" alt="Páginas de jogos de Réveillon sobre a mesa com taças e fogos ao fundo" loading="eager" decoding="async" onerror="this.style.display='none'">
+            <div class="gif-placeholder" aria-hidden="true"><span class="gif-placeholder-icon">🎆</span><strong>Demonstração ilustrativa</strong><small>GIF 5 · Kit Réveillon</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. PREÇO -->
+    <section class="section pricing" id="preco" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="center">
+          <span class="eyebrow">Seu kit de brincadeiras</span>
+          <h2 class="section-title" id="pricing-title">Uma ideia simples para animar o Natal</h2>
+        </div>
+        <div class="price-card">
+          <div class="price-bar">🎄 JOGOS DE NATAL PARA A CEIA EM FAMÍLIA</div>
+          <div class="price-content">
+            <p class="price-overline">Pagamento único</p>
+            <p class="price-value">R$ 24,90</p>
+            <p class="price-description">PDF digital pronto para baixar e imprimir · Sem mensalidade</p>
+            <ul class="includes">
+              <li>PDF em formato A4 com 32 páginas</li>
+              <li>Bingo de Natal e quiz da família</li>
+              <li>Mímica natalina e amigo ladrão</li>
+              <li>Desafios para crianças</li>
+              <li>Cartões para brincadeiras em grupo</li>
+              <li>Material digital enviado por e-mail</li>
+            </ul>
+            <!-- CHECKOUT WIVEN: link informado pelo proprietário da página. -->
+            <a class="button" href="https://checkout.wiven.com.br/checkout/cmwpiq83r0zeh01oot1tv1cs9?offer=7FRYPF6">Quero meu kit por R$ 24,90 <span class="arrow" aria-hidden="true">→</span></a>
+            <p class="small-note">O Kit Réveillon é opcional e custa R$ 9,90 adicionais no checkout.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. DIREITO DE ARREPENDIMENTO -->
+    <section class="section guarantee" aria-labelledby="guarantee-title">
+      <div class="container">
+        <div class="guarantee-card">
+          <span class="guarantee-icon" aria-hidden="true">🛡️</span>
+          <div>
+            <h2 id="guarantee-title">Você tem 7 dias para se arrepender da compra</h2>
+            <p>Em compras feitas pela internet, o Código de Defesa do Consumidor prevê o direito de arrependimento em até 7 dias, conforme o art. 49. Se precisar, solicite o cancelamento pelo suporte ou pela plataforma de compra.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. FAQ -->
+    <section class="section faq" id="duvidas" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="center">
+          <span class="eyebrow">Sem dúvida na hora da ceia</span>
+          <h2 class="section-title" id="faq-title">Perguntas frequentes</h2>
+        </div>
+        <div class="faq-wrap">
+          <details><summary>1. O kit é físico ou digital?</summary><p>É um produto <strong>100% digital</strong>, entregue em PDF no tamanho A4. Nenhuma caixa ou material impresso é enviado pelos Correios.</p></details>
+          <details><summary>2. Como recebo meu kit?</summary><p>Após a confirmação do pagamento, você recebe o acesso ao PDF no e-mail informado no checkout. Confira também a caixa de spam ou promoções.</p></details>
+          <details><summary>3. Posso imprimir mais de uma vez?</summary><p>Sim. Você pode reimprimir as páginas para usar pessoalmente nas suas comemorações. O arquivo não é destinado à revenda ou redistribuição.</p></details>
+          <details><summary>4. Funciona para quantas pessoas?</summary><p>O kit pode ser adaptado a grupos pequenos ou grandes. Algumas brincadeiras funcionam individualmente, outras em equipes, e você pode imprimir cópias extras quando necessário.</p></details>
+          <details><summary>5. Preciso de uma impressora colorida?</summary><p>Não. Você pode imprimir em preto e branco em folhas A4. Se preferir, também pode levar o arquivo a uma gráfica ou papelaria.</p></details>
+          <details><summary>6. Como peço reembolso?</summary><p>Se decidir desistir dentro do prazo legal de 7 dias, use o canal de suporte indicado no e-mail da compra ou a área de atendimento da plataforma de checkout para pedir o cancelamento e reembolso.</p></details>
+        </div>
+        <div class="faq-end">
+          <p>Pronto para descobrir quem é o campeão da mímica na sua família?</p>
+          <!-- CHECKOUT WIVEN: link informado pelo proprietário da página. -->
+          <a class="button button--green" href="https://checkout.wiven.com.br/checkout/cmwpiq83r0zeh01oot1tv1cs9?offer=7FRYPF6">Quero meu kit por R$ 24,90 <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 11. RODAPÉ -->
+  <footer class="footer">
+    <div class="container">
+      <strong>🎄 Jogos de Natal para a Ceia em Família</strong>
+      <p>Feito para brincar, rir e reunir quem importa. ❤️</p>
+      <p>© 2026 · Produto digital para impressão pessoal · <a href="#duvidas">Dúvidas frequentes</a></p>
+    </div>
+  </footer>
+</body>
+</html>
