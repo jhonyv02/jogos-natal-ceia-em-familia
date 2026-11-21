@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <!-- Meta Pixel: one initialization and one PageView per page load. Checkout conversion events belong to Wiven. -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1186425164337289');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1186425164337289&ev=PageView&noscript=1"></noscript>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174936">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Pedido confirmado · Jogos de Natal para a Ceia em Família</title>
+  <meta name="description" content="Seu pedido foi confirmado. O acesso ao material chega por e-mail. Em caso de dúvida, fale no WhatsApp (22) 99840-3465.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --cream: #fff9eb;
+      --cream-deep: #f7eedb;
+      --paper: #fffdf6;
+      --green: #174936;
+      --green-dark: #103a2c;
+      --green-soft: #e6f0e7;
+      --red: #b52e36;
+      --red-dark: #91202a;
+      --red-soft: #fae7e5;
+      --gold: #bf8b32;
+      --gold-light: #f6dfab;
+      --ink: #293b32;
+      --muted: #5b695f;
+      --border: #e6dcc7;
+      --shadow: 0 12px 34px rgba(56, 47, 20, .08);
+      --shadow-lift: 0 22px 50px rgba(43, 35, 14, .14);
+      --radius: 22px;
+      --font-title: 'Fredoka', system-ui, sans-serif;
+      --font-body: 'Nunito', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; }
+    a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 5px;
+    }
+    ::selection { background: var(--gold-light); color: var(--green-dark); }
+    .container { width: min(100% - 36px, 860px); margin-inline: auto; }
+    .section { padding: 36px 0; }
+    .center { text-align: center; }
+
+    /* Faixa de confirmação — não é menu */
+    .confirm-bar {
+      background: var(--green);
+      color: #fffdf4;
+      text-align: center;
+      padding: 14px 18px;
+      font-weight: 800;
+      font-size: .95rem;
+      line-height: 1.4;
+    }
+    .confirm-bar--soft {
+      background: #eaf1e4;
+      color: var(--green-dark);
+      border-bottom: 1px solid #d4dfcc;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      background: radial-gradient(ellipse at 78% 12%, #f8e6bf 0, transparent 43%),
+                  radial-gradient(ellipse at 2% 94%, #f8e0dd 0, transparent 40%),
+                  var(--cream);
+      padding: 36px 0 20px;
+    }
+    .hero h1 {
+      font: 700 clamp(1.85rem, 7.4vw, 3.05rem)/1.12 var(--font-title);
+      letter-spacing: -.035em;
+      color: var(--green-dark);
+      margin: 0 0 16px;
+      text-wrap: balance;
+    }
+    .hero-lead {
+      color: #46584c;
+      font-size: 1.05rem;
+      line-height: 1.58;
+      margin: 0 auto 22px;
+      max-width: 640px;
+    }
+    .hero-grid {
+      display: grid;
+      gap: 28px;
+      align-items: center;
+    }
+    .cover-wrap {
+      width: min(100%, 280px);
+      margin: 0 auto;
+      position: relative;
+    }
+    .cover-wrap img {
+      width: 100%;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lift);
+      background: var(--paper);
+    }
+    .cover-badge {
+      position: absolute;
+      top: -10px;
+      right: -8px;
+      background: var(--red);
+      color: #fff;
+      border-radius: 50%;
+      width: 84px;
+      height: 84px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font: 700 .82rem/1.15 var(--font-title);
+      border: 3px dashed #ffe2ab;
+      box-shadow: 0 8px 18px rgba(105,38,35,.17);
+      transform: rotate(12deg);
+      padding: 8px;
+    }
+
+    .includes {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 14px;
+    }
+    .includes li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 16px;
+      box-shadow: 0 8px 22px rgba(43,38,20,.035);
+    }
+    .includes .ico {
+      flex: 0 0 auto;
+      font-size: 1.35rem;
+      line-height: 1.2;
+    }
+    .includes li p { margin: 0; color: var(--ink); font-size: .98rem; }
+    .section-title {
+      margin: 0 auto 18px;
+      font: 600 clamp(1.55rem, 5vw, 2.15rem)/1.15 var(--font-title);
+      letter-spacing: -.03em;
+      color: var(--green-dark);
+      text-align: center;
+    }
+
+    .gallery { background: var(--cream-deep); border-block: 1px solid #eee2c9; }
+    .gallery-grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    .gallery-item { margin: 0; }
+    .gallery-item img {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: #fffdf5;
+      object-fit: cover;
+      aspect-ratio: 3 / 4;
+    }
+    .gallery-item figcaption {
+      margin-top: 10px;
+      text-align: center;
+      font-weight: 800;
+      color: var(--green);
+      font-size: .92rem;
+    }
+
+    .pricing {
+      background: radial-gradient(ellipse at 50% 12%, #f9ebc8, transparent 55%), var(--cream);
+    }
+    .price-card {
+      max-width: 555px;
+      margin: 0 auto;
+      background: var(--paper);
+      border: 2px solid var(--gold);
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lift);
+    }
+    .price-bar {
+      padding: 12px 18px;
+      background: var(--green);
+      color: white;
+      text-align: center;
+      font-weight: 900;
+      font-size: .9rem;
+    }
+    .price-content { padding: 27px 24px 28px; }
+    .price-overline {
+      text-align: center;
+      margin: 0;
+      font-weight: 900;
+      color: var(--red-dark);
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      font-size: .81rem;
+    }
+    .price-value {
+      text-align: center;
+      font: 700 clamp(3.2rem, 14vw, 4.6rem)/1.16 var(--font-title);
+      color: var(--green-dark);
+      margin: 5px 0 0;
+      letter-spacing: -.05em;
+    }
+    .price-description {
+      text-align: center;
+      color: var(--muted);
+      margin: 0 auto 18px;
+      font-size: .95rem;
+    }
+    .honest {
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+      margin: 0 0 20px;
+      font-style: italic;
+    }
+
+    .wiven-embed {
+      width: 100%;
+      min-height: 280px;
+      height: 320px;
+      margin: 8px 0 14px;
+    }
+    .wiven-embed iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      border: 0;
+      background: transparent;
+    }
+
+    .guarantee-note {
+      text-align: center;
+      color: #475e4c;
+      font-size: .9rem;
+      margin: 0;
+    }
+    .thanks-card {
+      max-width: 640px;
+      margin: 28px auto 0;
+      background: var(--paper);
+      border: 1px solid #d4dfcc;
+      border-radius: 24px;
+      padding: 28px 24px 32px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .thanks-icon {
+      display: grid;
+      place-items: center;
+      width: 74px;
+      height: 74px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: var(--green-soft);
+      font-size: 2.2rem;
+    }
+    .thanks-card h1 {
+      font: 700 clamp(1.8rem, 6vw, 2.5rem)/1.15 var(--font-title);
+      color: var(--green-dark);
+      margin: 0 0 14px;
+      letter-spacing: -.03em;
+    }
+    .thanks-card p { margin: 0 0 14px; color: #46584c; }
+    .thanks-card p:last-child { margin-bottom: 0; }
+    .wa-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 8px;
+      color: var(--green);
+      font-weight: 900;
+      text-decoration: none;
+      border: 1.5px solid var(--green);
+      border-radius: 12px;
+      padding: 12px 16px;
+      min-height: 48px;
+    }
+    .wa-link:hover { background: var(--green-soft); }
+
+    .footer {
+      background: var(--green-dark);
+      color: #e5f0e8;
+      padding: 22px 0;
+      text-align: center;
+    }
+    .footer strong { font: 600 1.05rem var(--font-title); }
+    .footer p { color: #c9dbcf; font-size: .83rem; margin: 8px 0 0; }
+
+    @media (min-width: 620px) {
+      .container { width: min(100% - 56px, 860px); }
+      .section { padding: 48px 0; }
+      .hero { padding: 48px 0 28px; }
+      .hero-grid { grid-template-columns: minmax(0, 1.15fr) 240px; gap: 36px; }
+      .hero .center-mobile { text-align: left; }
+      .hero-lead { margin-left: 0; }
+      .cover-wrap { width: 240px; margin: 0; }
+      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    }
+    @media (min-width: 860px) {
+      .gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .gallery-grid.gallery-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="confirm-bar">Pedido confirmado</div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="thanks-card">
+          <div class="thanks-icon" aria-hidden="true">🎄</div>
+          <h1>Obrigado! Seu pedido está confirmado.</h1>
+          <p>O acesso ao seu material chega por e-mail, no endereço que você informou na compra. Confira também a caixa de spam ou promoções.</p>
+          <p>Se precisar de ajuda, fale com a gente no WhatsApp <strong>(22) 99840-3465</strong>.</p>
+          <a class="wa-link" href="https://wa.me/5522998403465" rel="noopener noreferrer">Chamar no WhatsApp</a>
+        </div>
+
+        <div class="container" style="max-width:555px;margin:28px auto 0;padding:0;">
+          <!-- WIVEN_EMBED -->
+          <div class="wiven-embed">
+            <iframe
+              id="product-funnel-cmwpk2wsw011x01puehgw302i"
+              src="https://checkout.wiven.com.br/ext/funnel/cmwpk2wsw011x01puehgw302i"
+              width="100%" height="100%"
+              frameborder="0" allowtransparency="true" allow="payment *">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <strong>Jogos de Natal para a Ceia em Família</strong>
+      <p>Material digital para impressão pessoal · Garantia de 7 dias</p>
+    </div>
+  </footer>
+  <script src="https://app.wiven.com.br/scripts/product-funnel.js"></script>
+</body>
+</html>
+
