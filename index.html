@@ -271,6 +271,32 @@
     .faq-end { max-width: 470px; margin: 30px auto 0; text-align: center; }
     .faq-end p { font-weight: 900; color: var(--green); margin: 0 0 19px; }
 
+
+    /* Contagem real até o Natal, ajustada ao calendário de Brasília. */
+    .natal-countdown {
+      display: flex; align-items: center; gap: 14px;
+      margin: 18px 0 20px; padding: 13px 16px;
+      border: 1px solid #d8c184; border-radius: 16px;
+      background: var(--green-dark); color: #fff9eb;
+      box-shadow: 0 8px 20px rgba(16, 58, 44, .12);
+    }
+    .natal-countdown-number {
+      flex: 0 0 auto; min-width: 65px; padding: 7px 10px;
+      border-radius: 11px; background: #276044;
+      color: #fff; text-align: center;
+    }
+    .natal-countdown-number strong { display: block; font: 700 2rem/1.05 var(--font-title); font-variant-numeric: tabular-nums; }
+    .natal-countdown-number small { display: block; font-size: .65rem; font-weight: 900; letter-spacing: .1em; }
+    .natal-countdown-copy { min-width: 0; }
+    .natal-countdown-copy strong { display: block; color: #f6dfab; font: 600 1.05rem/1.22 var(--font-title); }
+    .natal-countdown-copy span { display: block; color: #ecf1e9; font-size: .84rem; line-height: 1.35; margin-top: 3px; }
+    @media (max-width: 360px) {
+      .natal-countdown { padding: 11px; gap: 10px; }
+      .natal-countdown-number { min-width: 58px; }
+      .natal-countdown-copy strong { font-size: .96rem; }
+    }
+    @media (min-width: 940px) { .natal-countdown { max-width: 485px; } }
+
     /* RODAPÉ */
     .footer { background: var(--green-dark); color: #e5f0e8; padding: 27px 0; text-align: center; }
     .footer strong { font: 600 1.18rem var(--font-title); }
@@ -334,6 +360,10 @@
           <span class="pill">🎅 Natal brasileiro, com brincadeira boa</span>
           <h1 id="hero-title">Depois do pavê… <span class="highlight">vem a diversão!</span></h1>
           <p class="hero-lead">Transforme a mesa da ceia em uma roda de risadas com o <strong>Jogos de Natal para a Ceia em Família</strong>: um PDF A4 com <strong>32 páginas</strong> de jogos e brincadeiras para imprimir.</p>
+          <div class="natal-countdown" role="status" aria-live="off" aria-label="Contagem regressiva para o Natal">
+            <div class="natal-countdown-number"><strong id="natal-dias">—</strong><small>DIAS</small></div>
+            <div class="natal-countdown-copy"><strong id="natal-titulo">🎄 Contagem regressiva para o Natal</strong><span>Prepare os jogos da sua ceia com antecedência. O contador mostra dias até 25 de dezembro, não o prazo da oferta.</span></div>
+          </div>
           <ul class="hero-benefits" aria-label="Destaques do kit">
             <li>✓ PDF digital A4</li>
             <li>✓ 32 páginas</li>
@@ -561,6 +591,39 @@
       <p>© 2026 · Produto digital para impressão pessoal · <a href="#duvidas">Dúvidas frequentes</a></p>
     </div>
   </footer>
+  <script>
+    // Usa a data civil de Brasília para que todos vejam a mesma contagem no Brasil.
+    (function () {
+      const number = document.getElementById('natal-dias');
+      const title = document.getElementById('natal-titulo');
+      if (!number || !title) return;
+      const formatter = new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'America/Sao_Paulo', year: 'numeric', month: '2-digit', day: '2-digit'
+      });
+      function atualizarContagemNatal() {
+        const parts = Object.fromEntries(formatter.formatToParts(new Date())
+          .filter(part => part.type !== 'literal').map(part => [part.type, Number(part.value)]));
+        const hoje = Date.UTC(parts.year, parts.month - 1, parts.day);
+        const natal = Date.UTC(parts.year, 11, 25);
+        const dias = Math.max(0, Math.round((natal - hoje) / 86400000));
+        number.textContent = dias;
+        title.textContent = dias === 0 ? '🎄 Hoje é Natal! Feliz Natal!' :
+          dias === 1 ? '🎄 Falta 1 dia para o Natal!' :
+          '🎄 Faltam ' + dias + ' dias para o Natal!';
+        if (hoje > natal) {
+          const proximo = Date.UTC(parts.year + 1, 11, 25);
+          const restantes = Math.round((proximo - hoje) / 86400000);
+          number.textContent = restantes;
+          title.textContent = '🎄 Faltam ' + restantes + ' dias para o próximo Natal!';
+        }
+      }
+      atualizarContagemNatal();
+      setInterval(atualizarContagemNatal, 60000);
+      document.addEventListener('visibilitychange', function () {
+        if (!document.hidden) atualizarContagemNatal();
+      });
+    }());
+  </script>
   <script src="https://app.wiven.com.br/scripts/product-funnel.js"></script>
 </body>
 </html>
